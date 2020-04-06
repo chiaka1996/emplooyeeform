@@ -1,0 +1,65 @@
+<!Doctype html>
+<html>
+    <head>
+        	<link rel="stylesheet" type="text/css" href="registration.css">
+        <title>
+            employee Registration
+        </title>
+    </head>
+    <body>
+
+        <!-- employee inputs -->
+        <div id="form-layout">
+            <form id="employee-input">
+                <label>Name</label>
+                <br>
+                <input type="text" id="name" value="" required>
+                <br>
+
+                <label>lastname</label>
+                <br>
+                <input type="text" id="lastname" value="" required>
+                <br>
+
+                <label>E-mail</label>
+                <br>
+                <input type="email" id="email" value="" required>
+                <br>
+                <button type="submit" id="submit" onclick="inputValues(event)">Submit</button>
+
+            </form>
+        </div>
+
+        <!-- gennerate password form -->
+        <div id="password-layout">
+            <h3>Welcome <span id='user-name'></span></h3>
+            <p> Your password is: <span id="passwordGenerated"></span></p>
+
+            <p>Are you satisfied with the Password? <button id='yes' onClick="yesClick()">Yes</button> <button id='no' onClick="noClick()">No</button></p>
+
+            <div id="getPassword">
+                <div id="or"><strong> GENERATE PASSWORD</strong></div>
+            <div>
+                <form id="userChoice">
+                    <span>please, password should be 7 or more characters.</span>
+                    <br>
+                    <input type="text" value="" placeholder="password" id="userPasswordChoice">
+                    <br>
+                    <button type="button" id="sub" class="submitPassword" onClick="subClick()">submit</button>
+                </form>
+            </div>
+            </div>
+        </div>
+
+        <div id="dashboard">
+                <h2>DASHBOARD</h2>
+                <p id="userInput"> </p>
+                <div>
+                    <button id="next" onClick="next()">next</button>   
+                    <button id="finish" onClick="finish(event)">Finish</button>
+                </div>
+            </div>
+
+    </body>
+    <script src="registration.js"></script>
+</html>
